@@ -1,0 +1,18 @@
+﻿@model IEnumerable<ShoppingStore.Models.PageViewModel>
+
+@{
+    string title = (string)TempData["PageTitle"];
+}
+
+@foreach (var item in Model)
+{
+    if (title == item.Title)
+    {
+        <li class="active"><a href="/@item.Description">@item.Title</a></li>
+    }
+    else
+    {
+        <li><a href="/@item.Description">@item.Title</a></li>
+    }
+
+}

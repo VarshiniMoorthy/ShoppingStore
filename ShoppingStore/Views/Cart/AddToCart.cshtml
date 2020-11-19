@@ -1,0 +1,8 @@
+﻿@model ShoppingStore.Entity.Cart
+
+
+<div class="ajaxcart" style="color:white;">
+    Your cart: @Model.Quantity item(s) - 	&#8377; @Model.Price
+    <br />
+    @Html.ActionLink("Checkout", "Index")
+</div>
